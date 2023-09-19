@@ -1127,17 +1127,17 @@
       },
       methods: {
         jump(url) {
-		if (this.queryIndex == 0) {
-			localStorage.setItem('indexQueryCondition', document.getElementById("zhaobiaoxiangmuxiangmumingcheng").value);
-		}
+			if (this.queryIndex == 0) {
+				localStorage.setItem('indexQueryCondition', document.getElementById("zhaobiaoxiangmuxiangmumingcheng").value);
+			}
           	jump(url)
         },
-	queryChange(event) {
-		this.queryIndex = event.target.value;
-		if (this.queryIndex == 0) {
-			this.zhaobiaoxiangmuxiangmumingcheng = this.queryList[event.target.value].queryName;
+		queryChange(event) {
+			this.queryIndex = event.target.value;
+			if (this.queryIndex == 0) {
+				this.zhaobiaoxiangmuxiangmumingcheng = this.queryList[event.target.value].queryName;
+			}
 		}
-	}
       }
     });
 
