@@ -33,6 +33,6 @@ build/
 .vscode/
 
 src/main/resources/application.yml
-src/main/resources/admin/admin/dict/
+src/main/resources/admin/admin/dist/
 src/main/resources/admin/admin/node_modules/
 
