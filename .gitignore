@@ -3,6 +3,7 @@ target/
 application.yml
 src/main/resources/application.yml
 src\main\resources\application.yml
+src/main/resources/admin/admin/dict/
 src/main/resources/admin/admin/node_modules/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**
