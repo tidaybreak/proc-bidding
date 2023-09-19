@@ -1,3 +1,5 @@
+./mvnw spring-boot:run
+
 get-executionpolicy
 set-executionpolicy remotesigned
 

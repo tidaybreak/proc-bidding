@@ -2,7 +2,7 @@
 server:
     tomcat:
         uri-encoding: UTF-8
-    port: 80
+    port: 8080
     address: 0.0.0.0
     servlet:
         #context-path: /
@@ -12,7 +12,7 @@ spring:
     datasource:
         driverClassName: com.mysql.cj.jdbc.Driver
         #driverClassName: com.mysql.jdbc.Driver
-        url: jdbc:mysql://172.18.0.6:33061/springbootbtw32?useUnicode=true&characterEncoding=utf-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT%2B8
+        url: jdbc:mysql://172.18.0.6:3306/springbootbtw32?useUnicode=true&characterEncoding=utf-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT%2B8
         username: root
         password: ti999
 
