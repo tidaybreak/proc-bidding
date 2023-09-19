@@ -12,7 +12,7 @@ spring:
     datasource:
         driverClassName: com.mysql.cj.jdbc.Driver
         #driverClassName: com.mysql.jdbc.Driver
-        url: jdbc:mysql://121.46.23.132:3304/springbootbtw32?useUnicode=true&characterEncoding=utf-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT%2B8
+        url: jdbc:mysql://172.18.0.6:3306/springbootbtw32?useUnicode=true&characterEncoding=utf-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT%2B8
         username: root
         password: ti999
 
