@@ -5,16 +5,14 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<meta name="google" content="notranslate">
-	<title>奥飞数据招采供应商协同平台</title>
-	<link rel="shortcut icon" href="http://prob41931.pic24.websiteonline.cn/upload/bitbug_favicon_75pe.ico" type="image/x-icon">
+	<title></title>
+	<link rel="shortcut icon" href="/app/front/img/favicon.ico" type="image/x-icon">
 	<script type="text/javascript" src="/app/front/xznstatic/js/jquery-1.11.3.min.js"></script>
 
-	<link href="https://cf-front.s3.cn-north-1.jdcloud-oss.com/production/projects/fm-proc-bidding-front/20230824200257/assets/css/app.cb7dfb64.css" rel="preload" as="style">
-	<link href="https://cf-front.s3.cn-north-1.jdcloud-oss.com/production/projects/fm-proc-bidding-front/20230824200257/assets/css/app.cb7dfb64.css" rel="stylesheet">
+	<link href="/app/front/css/app.cb7dfb64.css" rel="stylesheet">
 
 
-	<link rel="stylesheet" type="text/css" href="https://cf-front.s3.cn-north-1.jdcloud-oss.com/production/projects/fm-proc-bidding-front/20230824200257/assets/css/chunk-7379fcd4.a2901a7a.css">
-	<link rel="stylesheet" type="text/css" href="https://cf-front.s3.cn-north-1.jdcloud-oss.com/production/projects/fm-proc-bidding-front/20230824200257/assets/css/chunk-04616558.de769991.css">
+	<link rel="stylesheet" type="text/css" href="/app/front/css/chunk-7379fcd4.a2901a7a.css">
 </head>
 
 <body class="" style="">
@@ -80,13 +78,16 @@
 						<!---->
 						<!---->
 					</form>
-					<div data-v-d94d3b2c="" class="container-actions"><span data-v-d94d3b2c=""><button type="button" class="el-button el-button--primary el-button--small">
+					<div data-v-d94d3b2c="" class="container-actions"><span data-v-d94d3b2c="">
+						<button v-if="isAuth('zhaobiaoxiangmu','投标')" @click="onAcrossTap('zaixiantoubiao','是','','')" type="button" class="el-button el-button--primary el-button--small">
                                     <!---->
 						<!----><span>我要报名</span>
-                                </button></span><button data-v-d94d3b2c="" type="button" class="el-button el-button--primary el-button--small" style="margin-left: 10px;">
-						<!---->
-						<!----><span>我要咨询</span>
-					</button></div>
+                                </button>
+					</span>
+						<!--<button data-v-d94d3b2c="" type="button" class="el-button el-button--primary el-button--small" style="margin-left: 10px;">
+						<span>我要咨询</span>
+					</button>-->
+					</div>
 				</div>
 				<div data-v-28a4630e="" data-v-d94d3b2c="" class="el-dialog__wrapper" class-name="vertical-center-modal" style="display: none;">
 					<div role="dialog" aria-modal="true" aria-label="我要咨询" class="el-dialog" style="margin-top: 15vh; width: 600px;">
@@ -529,6 +530,7 @@
 	});
 
 	$(function() {
+		document.title = projectName;
 		localStorage.setItem('navigate', "zhaobiaoxiangmu");
 		$("#headerpage").load("/app/front/pages/header.html");
 		$("#footerpage").load("/app/front/pages/footer.html");

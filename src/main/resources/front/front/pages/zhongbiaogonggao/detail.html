@@ -5,16 +5,13 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<meta name="google" content="notranslate">
-	<title>奥飞数据招采供应商协同平台</title>
-	<link rel="shortcut icon" href="http://prob41931.pic24.websiteonline.cn/upload/bitbug_favicon_75pe.ico" type="image/x-icon">
+	<title></title>
+	<link rel="shortcut icon" href="/app/front/img/favicon.ico" type="image/x-icon">
 	<script type="text/javascript" src="/app/front/xznstatic/js/jquery-1.11.3.min.js"></script>
 
-	<link href="https://cf-front.s3.cn-north-1.jdcloud-oss.com/production/projects/fm-proc-bidding-front/20230824200257/assets/css/app.cb7dfb64.css" rel="preload" as="style">
-	<link href="https://cf-front.s3.cn-north-1.jdcloud-oss.com/production/projects/fm-proc-bidding-front/20230824200257/assets/css/app.cb7dfb64.css" rel="stylesheet">
+	<link href="/app/front/css/app.cb7dfb64.css" rel="stylesheet">
 
-
-	<link rel="stylesheet" type="text/css" href="https://cf-front.s3.cn-north-1.jdcloud-oss.com/production/projects/fm-proc-bidding-front/20230824200257/assets/css/chunk-7379fcd4.a2901a7a.css">
-	<link rel="stylesheet" type="text/css" href="https://cf-front.s3.cn-north-1.jdcloud-oss.com/production/projects/fm-proc-bidding-front/20230824200257/assets/css/chunk-04616558.de769991.css">
+	<link rel="stylesheet" type="text/css" href="/app/front/css/chunk-7379fcd4.a2901a7a.css">
 </head>
 
 <body class="" style="">
@@ -24,11 +21,11 @@
 
 		<main class="el-main main">
 			<div data-v-d94d3b2c="" class="layout-content-container">
-				<div data-v-d94d3b2c="" aria-label="Breadcrumb" role="navigation" class="el-breadcrumb"><span data-v-d94d3b2c="" class="el-breadcrumb__item"><span role="link" class="el-breadcrumb__inner is-link">首页</span><span role="presentation" class="el-breadcrumb__separator">/</span></span><span data-v-d94d3b2c="" class="el-breadcrumb__item"><span role="link" class="el-breadcrumb__inner is-link">采购信息</span><span role="presentation" class="el-breadcrumb__separator">/</span></span><span data-v-d94d3b2c="" class="el-breadcrumb__item" aria-current="page"><span role="link" class="el-breadcrumb__inner">{{title}}</span><span role="presentation" class="el-breadcrumb__separator">/</span></span></div>
+				<div data-v-d94d3b2c="" aria-label="Breadcrumb" role="navigation" class="el-breadcrumb"><span data-v-d94d3b2c="" class="el-breadcrumb__item"><span role="link" class="el-breadcrumb__inner is-link">首页</span><span role="presentation" class="el-breadcrumb__separator">/</span></span><span data-v-d94d3b2c="" class="el-breadcrumb__item"><span role="link" class="el-breadcrumb__inner is-link">招标公告</span><span role="presentation" class="el-breadcrumb__separator">/</span></span><span data-v-d94d3b2c="" class="el-breadcrumb__item" aria-current="page"><span role="link" class="el-breadcrumb__inner">{{title}}</span><span role="presentation" class="el-breadcrumb__separator">/</span></span></div>
 				<div data-v-d94d3b2c="" class="container-body">
 					<div data-v-d94d3b2c="" class="container-header">
 						<h3 data-v-d94d3b2c="">{{title}}</h3>
-						<p data-v-d94d3b2c="" class="info"><span data-v-d94d3b2c="">一级品类：{{detail.zhaobiaofenlei}}</span><span data-v-d94d3b2c="">发布来源：奥飞数据</span></p>
+						<p data-v-d94d3b2c="" class="info"><span data-v-d94d3b2c="">品类：{{detail.zhaobiaofenlei}}</span><span data-v-d94d3b2c="">发布来源：奥飞数据</span></p>
 					</div>
 					<form data-v-d94d3b2c="" class="el-form">
 						<div data-v-d94d3b2c="" class="el-form-item"><label class="el-form-item__label" style="width: 160px;">项目名称：</label>
@@ -508,6 +505,7 @@
 	});
 
 	$(function() {
+		document.title = projectName;
 		localStorage.setItem('navigate', "zhongbiaogonggao");
 		$("#headerpage").load("/app/front/pages/header.html");
 		$("#footerpage").load("/app/front/pages/footer.html");

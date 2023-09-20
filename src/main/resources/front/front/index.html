@@ -5,16 +5,12 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<meta name="google" content="notranslate">
-	<title>奥飞数据招采供应商协同平台</title>
-	<link rel="shortcut icon" href="http://prob41931.pic24.websiteonline.cn/upload/bitbug_favicon_75pe.ico" type="image/x-icon">
+	<title></title>
+	<link rel="shortcut icon" href="/app/front/img/favicon.ico" type="image/x-icon">
 	<script type="text/javascript" src="/app/front/xznstatic/js/jquery-1.11.3.min.js"></script>
 
-
-	<link href="https://cf-front.s3.cn-north-1.jdcloud-oss.com/production/projects/fm-proc-bidding-front/20230824200257/assets/css/app.cb7dfb64.css" rel="preload" as="style">
-	<link href="https://cf-front.s3.cn-north-1.jdcloud-oss.com/production/projects/fm-proc-bidding-front/20230824200257/assets/css/app.cb7dfb64.css" rel="stylesheet">
-
-	<link rel="stylesheet" type="text/css" href="https://cf-front.s3.cn-north-1.jdcloud-oss.com/production/projects/fm-proc-bidding-front/20230824200257/assets/css/chunk-eb15a1ba.12564c65.css">
-	<script charset="utf-8" src="https://cf-front.s3.cn-north-1.jdcloud-oss.com/production/projects/fm-proc-bidding-front/20230824200257/assets/js/chunk-eb15a1ba.f3a70fc3.js"></script>
+	<link href="/app/front/css/app.cb7dfb64.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/app/front/css/chunk.css">
 </head>
 
 <body class="">
@@ -96,13 +92,11 @@
 											<p data-v-523df87c="" data-v-76a723f7="" :title="item.xiangmumingcheng" class="name">{{item.xiangmumingcheng}}</p>
 											<p data-v-523df87c="" data-v-76a723f7="" class="info"><span data-v-523df87c="" data-v-76a723f7="">发布来源：奥飞数据集团</span><span data-v-523df87c="" data-v-76a723f7="">报名截止时间：{{item.jiezhishijian}}</span></p>
 										</div>
-										<div data-v-523df87c="" data-v-76a723f7="" class="right" style="width: 220px; text-align: right;"><span data-v-523df87c="" data-v-76a723f7="" class="action"><span data-v-523df87c="" data-v-76a723f7=""><button type="button" class="el-button el-button--primary el-button--default">
-                                                            <!---->
-											<!----><span>报名</span>
-                                                        </button></span><button data-v-523df87c="" type="button" class="el-button el-button--primary" data-v-76a723f7="" style="margin-left: 10px;">
-                                                        <!---->
-											<!----><span>咨询</span>
-                                                    </button></span><i data-v-523df87c="" data-v-76a723f7="" class="el-icon-arrow-right more-icon"></i></div>
+										<div data-v-523df87c="" data-v-76a723f7="" class="right" style="width: 220px; text-align: right;">
+											<span data-v-523df87c="" data-v-76a723f7="" class="action">
+												<span data-v-523df87c="" data-v-76a723f7="">
+												</span>
+											</span><i data-v-523df87c="" data-v-76a723f7="" class="el-icon-arrow-right more-icon"></i></div>
 									</li>
 
 									<!--<li data-v-523df87c="" data-v-76a723f7="">
@@ -367,6 +361,7 @@
 	});
 
 	$(function() {
+		document.title = projectName;
 		localStorage.setItem('navigate', "home");
 		$("#headerpage").load("/app/front/pages/header.html");
 		$("#footerpage").load("/app/front/pages/footer.html");

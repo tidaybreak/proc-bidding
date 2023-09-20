@@ -1,20 +1,56 @@
-<div data-v-c6b36f76=""><a data-v-c6b36f76="" href="/app/front/index.html" class="logo"><span data-v-c6b36f76="" class="text">奥飞数据招采供应商协同平台</span></a>
+<div id="h" data-v-c6b36f76=""><a data-v-c6b36f76="" href="/app/front/index.html" class="logo"><span data-v-c6b36f76="" class="text">奥飞数据招采供应商协同平台</span></a>
 
     <ul data-v-c6b36f76="" class="menu">
-        <li data-v-c6b36f76="" id="home" class=""><a data-v-c6b36f76="" href="javascript"><span data-v-c6b36f76="">首页</span></a></li>
+        <li data-v-c6b36f76="" id="home" class=""><a data-v-c6b36f76="" href="/app/front/index.html"><span data-v-c6b36f76="">首页</span></a></li>
         <li data-v-c6b36f76="" id="zhaobiaoxiangmu" class=""><a data-v-c6b36f76="" href="/app/front/pages/zhaobiaoxiangmu/list.html"><span data-v-c6b36f76="">采购信息</span></a></li>
         <li data-v-c6b36f76="" id="zhongbiaogonggao" class=""><a data-v-c6b36f76="" href="/app/front/pages/zhongbiaogonggao/list.html"><span data-v-c6b36f76="">中标公告</span></a></li>
         <li data-v-c6b36f76="" id="xinwenzixun" class=""><a data-v-c6b36f76="" href="/app/front/pages/xinwenzixun/list.html"><span data-v-c6b36f76="">新闻动态</span></a></li>
-        <li data-v-c6b36f76="" class=""><a data-v-c6b36f76="" href="javascript"><span data-v-c6b36f76="">我的中心</span></a></li>
-        <li data-v-c6b36f76="" class="small"><a data-v-c6b36f76="" href="javascript:void(0)">tihamm</a></li>
+        <li data-v-c6b36f76="" id="myinfo" class=""><a id="mya" data-v-c6b36f76="" href="/app/front/pages/login/login.html"><span data-v-c6b36f76="">我的中心</span></a></li>
+
+        <li id="uname" data-v-c6b36f76="" class="small" style="display:none;"><a data-v-c6b36f76="" href="/app/admin/dist/index.html" id="username">tihamm</a></li>
+        <li id="login" data-v-c6b36f76="" class="small" style="display:none;"><a data-v-c6b36f76="" href="/app/front/pages/login/login.html">登录</a></li>
         <li data-v-c6b36f76="" class="divider"></li>
-        <li data-v-c6b36f76="" class="small"><a data-v-c6b36f76="" href="javascript:void(0)">退出</a></li>
+        <li id="signout" data-v-c6b36f76="" class="small" style="display:none;"><a data-v-c6b36f76="" href="javascript:logout()">退出</a></li>
+        <li id="signin" data-v-c6b36f76="" class="small" style="display:none;"><a data-v-c6b36f76="" href="/app/front/pages/gongyingshang/register.html?tablename=gongyingshang">注册</a></li>
     </ul>
 </div>
+
+
 
 <script type="text/javascript">
     var active = localStorage.getItem('navigate');
     console.log("active: " + active);
     var element = document.getElementById(active);
     element.classList.add("active");
+
+    function logout() {
+        localStorage.removeItem('Token');
+        localStorage.removeItem('role');
+        localStorage.removeItem('sessionTable');
+        localStorage.removeItem('adminName');
+        localStorage.removeItem('userid');
+        localStorage.removeItem('vip');
+        localStorage.removeItem('userTable');
+        localStorage.removeItem('iframeUrl');
+        window.parent.location.href = '/app/front/index.html';
+    }
+
+    layui.use(['layer', 'element', 'carousel', 'form', 'http', 'jquery'], function() {
+        var http = layui.http;
+        http.request('gongyingshang/session', 'get', {}, function(res) {
+            var data = res.data
+            console.log("session: " + data);
+            if (data === undefined) {
+                $("#login").show();
+                $("#signin").show();
+            } else {
+                $("#username").html(data.gongyingshangmingcheng);
+                $("#uname").show();
+                $("#signout").show();
+                $("#mya").attr("href", "/app/front/pages/gongyingshang/center.html");
+                localStorage.setItem('userid', data.id);
+            }
+        })
+    });
+
 </script>

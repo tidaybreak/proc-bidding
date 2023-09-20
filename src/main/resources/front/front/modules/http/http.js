@@ -34,9 +34,9 @@ layui.define(['jquery', 'layer'], function(exports) { //提示：模块也可以
 				dataType: 'json',
 				type: type,
 				success: function(result, status, xhr) {
-					if (result.code == 0) {
+					if (result.code == 0 || result.code == 401) {
 						callback(result);
-					} else if (result.code == 401 || result.code == 403) {
+					} else if (result.code == 403) {
 						window.parent.location.href = '../login/login.html';
 					} else {
 						layer.msg(result.msg, {
@@ -48,8 +48,8 @@ layui.define(['jquery', 'layer'], function(exports) { //提示：模块也可以
 				},
 				error: function(xhr, status, error) {
 					console.log(xhr, status, error)
-					if(xhr.responseJSON.code==401 || xhr.responseJSON.code==403) {
-                                                 window.parent.location.href = '../login/login.html';
+					if(xhr.responseJSON.code==403) {
+                       window.parent.location.href = '../login/login.html';
 					} else {
 						layer.msg("请求接口失败", {
 							time: 2000,
