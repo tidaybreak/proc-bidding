@@ -11,9 +11,7 @@
 
 	<link href="/app/front/css/app.cb7dfb64.css" rel="stylesheet">
 
-	<link rel="stylesheet" type="text/css" href="https://cf-front.s3.cn-north-1.jdcloud-oss.com/production/projects/fm-proc-bidding-front/20230824200257/assets/css/chunk-04616558.de769991.css">
-	<link rel="stylesheet" type="text/css" href="https://cf-front.s3.cn-north-1.jdcloud-oss.com/production/projects/fm-proc-bidding-front/20230824200257/assets/css/chunk-a7674e80.dc5a2247.css">
-	<link rel="stylesheet" type="text/css" href="https://cf-front.s3.cn-north-1.jdcloud-oss.com/production/projects/fm-proc-bidding-front/20230824200257/assets/css/chunk-15958de2.30f83120.css">
+
 	<link rel="stylesheet" type="text/css" href="../../layui/css/layui.css">
 	<link rel="stylesheet" type="text/css" href="../../xznstatic/css/public.css"/>
 	<style type="text/css">
@@ -63,6 +61,46 @@
 			margin: 0;
 			box-sizing: border-box;
 		}
+
+		.input-div {
+			padding:0;
+			boxShadow:0 0 6px rgba(255,0,0,0);
+			margin:0 auto;
+			borderColor:rgba(0,0,0,1);
+			backgroundColor:rgba(255, 255, 255, 0);
+			borderRadius:0;
+			borderWidth:0;
+			width:80%;
+			borderStyle:solid;
+			height:64px;
+		}
+		.input-div label {
+			padding:0 10px;
+			boxShadow:0 0 6px rgba(255,0,00);
+			borderColor:rgba(0,00,0);
+			backgroundColor:transparent;
+			color:#333;
+			borderRadius:0;
+			textAlign:right;
+			borderWidth:0;
+			width:84px;
+			font-size:16px;
+			borderStyle:solid;
+		}
+		.input-div input{
+			padding:0 10px;
+			boxShadow:0 0 0px rgba(0,0,0,.5);
+			borderColor:#ccc;
+			backgroundColor:rgba(233,233,233,1);
+			color:#333;
+			borderRadius:8px;
+			textAlign:left;
+			borderWidth:0;
+			width:100%;
+			fontSize:14px;
+			borderStyle:solid;
+			height:44px;
+		}
 	</style>
 </head>
 
@@ -76,35 +114,36 @@
 				<div class="register" id="app" style="position:relative">
 					<form class="layui-form login-form" :style='{"padding":"20px","boxShadow":"0 0 0px rgba(255,0,0,.8)","borderColor":"rgba(0,0,0,.3)","backgroundColor":"rgba(255, 255, 255, 0)","borderRadius":"20px","borderWidth":"0","width":"500px","borderStyle":"solid","justifyContent":"center","height":"auto"}'>
 						<p class="title" v-if="true" :style='{"padding":"0 10px","boxShadow":"0 0 0px rgba(255,0,0,.8)","margin":"10px auto","borderColor":"rgba(0,0,0,1)","backgroundColor":"rgba(247, 247, 247, 0)","color":"rgba(0, 0, 0, 1)","isshow":true,"borderRadius":"8px","borderWidth":"0","width":"100%","lineHeight":"32px","fontSize":"24px","borderStyle":"solid"}'>供应商注册</p>
-						<div :style='{"padding":"0","boxShadow":"0 0 6px rgba(255,0,0,0)","margin":"0 auto","borderColor":"rgba(0,0,0,1)","backgroundColor":"rgba(255, 255, 255, 0)","borderRadius":"0","borderWidth":"0","width":"80%","borderStyle":"solid","height":"64px"}' class="form-item layui-form-text">
-							<label v-if="false" :style='{"padding":"0 10px","boxShadow":"0 0 6px rgba(255,0,0,0)","borderColor":"rgba(0,0,0,0)","backgroundColor":"transparent","color":"#333","borderRadius":"0","textAlign":"right","borderWidth":"0","width":"84px","fontSize":"16px","borderStyle":"solid"}' class="form-label">供应商名称：</label>
-							<input :style='{"padding":"0 10px","boxShadow":"0 0 0px rgba(0,0,0,.5)","borderColor":"#ccc","backgroundColor":"rgba(233, 233, 233, 1)","color":"#333","borderRadius":"8px","textAlign":"left","borderWidth":"0","width":"100%","fontSize":"14px","borderStyle":"solid","height":"44px"}' type="text"   id="gongyingshangmingcheng" name="gongyingshangmingcheng" placeholder="请输入供应商名称" autocomplete="off" class="layui-input">
+
+						<div class="form-item layui-form-text input-div">
+							<label v-if="true" class="form-label">供应商名称：</label>
+							<input type="text" id="gongyingshangmingcheng" name="gongyingshangmingcheng" placeholder="请输入供应商名称" autocomplete="off" class="layui-input">
 						</div>
-						<div :style='{"padding":"0","boxShadow":"0 0 6px rgba(255,0,0,0)","margin":"0 auto","borderColor":"rgba(0,0,0,1)","backgroundColor":"rgba(255, 255, 255, 0)","borderRadius":"0","borderWidth":"0","width":"80%","borderStyle":"solid","height":"64px"}' class="form-item layui-form-text">
-							<label v-if="false" :style='{"padding":"0 10px","boxShadow":"0 0 6px rgba(255,0,0,0)","borderColor":"rgba(0,0,0,0)","backgroundColor":"transparent","color":"#333","borderRadius":"0","textAlign":"right","borderWidth":"0","width":"84px","fontSize":"16px","borderStyle":"solid"}' class="form-label">识别码：</label>
-							<input :style='{"padding":"0 10px","boxShadow":"0 0 0px rgba(0,0,0,.5)","borderColor":"#ccc","backgroundColor":"rgba(233, 233, 233, 1)","color":"#333","borderRadius":"8px","textAlign":"left","borderWidth":"0","width":"100%","fontSize":"14px","borderStyle":"solid","height":"44px"}' type="text"   id="shibiema" name="shibiema" placeholder="请输入识别码" autocomplete="off" class="layui-input">
+						<div class="form-item layui-form-text input-div">
+							<label v-if="true" class="form-label">识别码：</label>
+							<input type="text" id="shibiema" name="shibiema" placeholder="请输入识别码" autocomplete="off" class="layui-input">
 						</div>
-						<div :style='{"padding":"0","boxShadow":"0 0 6px rgba(255,0,0,0)","margin":"0 auto","borderColor":"rgba(0,0,0,1)","backgroundColor":"rgba(255, 255, 255, 0)","borderRadius":"0","borderWidth":"0","width":"80%","borderStyle":"solid","height":"64px"}' class="form-item">
+						<div  class="form-item input-div">
 							<label v-if="false" :style='{"padding":"0 10px","boxShadow":"0 0 6px rgba(255,0,0,0)","borderColor":"rgba(0,0,0,0)","backgroundColor":"transparent","color":"#333","borderRadius":"0","textAlign":"right","borderWidth":"0","width":"84px","fontSize":"16px","borderStyle":"solid"}' class="form-label">密码：</label>
 							<input :style='{"padding":"0 10px","boxShadow":"0 0 0px rgba(0,0,0,.5)","borderColor":"#ccc","backgroundColor":"rgba(233, 233, 233, 1)","color":"#333","borderRadius":"8px","textAlign":"left","borderWidth":"0","width":"100%","fontSize":"14px","borderStyle":"solid","height":"44px"}' type="password" name="mima" required lay-verify="required" placeholder="请输入密码" autocomplete="off" class="layui-input">
 						</div>
-						<div :style='{"padding":"0","boxShadow":"0 0 6px rgba(255,0,0,0)","margin":"0 auto","borderColor":"rgba(0,0,0,1)","backgroundColor":"rgba(255, 255, 255, 0)","borderRadius":"0","borderWidth":"0","width":"80%","borderStyle":"solid","height":"64px"}' class="form-item">
+						<div  class="form-item input-div">
 							<label v-if="false" :style='{"padding":"0 10px","boxShadow":"0 0 6px rgba(255,0,0,0)","borderColor":"rgba(0,0,0,0)","backgroundColor":"transparent","color":"#333","borderRadius":"0","textAlign":"right","borderWidth":"0","width":"84px","fontSize":"16px","borderStyle":"solid"}' class="form-label">确认密码：</label>
 							<input :style='{"padding":"0 10px","boxShadow":"0 0 0px rgba(0,0,0,.5)","borderColor":"#ccc","backgroundColor":"rgba(233, 233, 233, 1)","color":"#333","borderRadius":"8px","textAlign":"left","borderWidth":"0","width":"100%","fontSize":"14px","borderStyle":"solid","height":"44px"}' type="password" name="mima2" required lay-verify="required" placeholder="请再次输入密码" autocomplete="off" class="layui-input">
 						</div>
-						<div :style='{"padding":"0","boxShadow":"0 0 6px rgba(255,0,0,0)","margin":"0 auto","borderColor":"rgba(0,0,0,1)","backgroundColor":"rgba(255, 255, 255, 0)","borderRadius":"0","borderWidth":"0","width":"80%","borderStyle":"solid","height":"64px"}' class="form-item layui-form-text">
+						<div  class="form-item layui-form-text input-div">
 							<label v-if="false" :style='{"padding":"0 10px","boxShadow":"0 0 6px rgba(255,0,0,0)","borderColor":"rgba(0,0,0,0)","backgroundColor":"transparent","color":"#333","borderRadius":"0","textAlign":"right","borderWidth":"0","width":"84px","fontSize":"16px","borderStyle":"solid"}' class="form-label">供应商电话：</label>
 							<input :style='{"padding":"0 10px","boxShadow":"0 0 0px rgba(0,0,0,.5)","borderColor":"#ccc","backgroundColor":"rgba(233, 233, 233, 1)","color":"#333","borderRadius":"8px","textAlign":"left","borderWidth":"0","width":"100%","fontSize":"14px","borderStyle":"solid","height":"44px"}' type="text"   id="gongyingshangdianhua" name="gongyingshangdianhua" placeholder="请输入供应商电话" autocomplete="off" class="layui-input">
 						</div>
-						<div :style='{"padding":"0","boxShadow":"0 0 6px rgba(255,0,0,0)","margin":"0 auto","borderColor":"rgba(0,0,0,1)","backgroundColor":"rgba(255, 255, 255, 0)","borderRadius":"0","borderWidth":"0","width":"80%","borderStyle":"solid","height":"64px"}' class="form-item layui-form-text">
+						<div  class="form-item layui-form-text input-div">
 							<label v-if="false" :style='{"padding":"0 10px","boxShadow":"0 0 6px rgba(255,0,0,0)","borderColor":"rgba(0,0,0,0)","backgroundColor":"transparent","color":"#333","borderRadius":"0","textAlign":"right","borderWidth":"0","width":"84px","fontSize":"16px","borderStyle":"solid"}' class="form-label">负责人：</label>
 							<input :style='{"padding":"0 10px","boxShadow":"0 0 0px rgba(0,0,0,.5)","borderColor":"#ccc","backgroundColor":"rgba(233, 233, 233, 1)","color":"#333","borderRadius":"8px","textAlign":"left","borderWidth":"0","width":"100%","fontSize":"14px","borderStyle":"solid","height":"44px"}' type="text"   id="fuzeren" name="fuzeren" placeholder="请输入负责人" autocomplete="off" class="layui-input">
 						</div>
-						<div :style='{"padding":"0","boxShadow":"0 0 6px rgba(255,0,0,0)","margin":"0 auto","borderColor":"rgba(0,0,0,1)","backgroundColor":"rgba(255, 255, 255, 0)","borderRadius":"0","borderWidth":"0","width":"80%","borderStyle":"solid","height":"64px"}' class="form-item layui-form-text">
+						<div  class="form-item layui-form-text input-div">
 							<label v-if="false" :style='{"padding":"0 10px","boxShadow":"0 0 6px rgba(255,0,0,0)","borderColor":"rgba(0,0,0,0)","backgroundColor":"transparent","color":"#333","borderRadius":"0","textAlign":"right","borderWidth":"0","width":"84px","fontSize":"16px","borderStyle":"solid"}' class="form-label">联系电话：</label>
 							<input :style='{"padding":"0 10px","boxShadow":"0 0 0px rgba(0,0,0,.5)","borderColor":"#ccc","backgroundColor":"rgba(233, 233, 233, 1)","color":"#333","borderRadius":"8px","textAlign":"left","borderWidth":"0","width":"100%","fontSize":"14px","borderStyle":"solid","height":"44px"}' type="text"   id="lianxidianhua" name="lianxidianhua" placeholder="请输入联系电话" autocomplete="off" class="layui-input">
 						</div>
-						<div :style='{"padding":"0","boxShadow":"0 0 6px rgba(255,0,0,0)","margin":"0 auto","borderColor":"rgba(0,0,0,1)","backgroundColor":"rgba(255, 255, 255, 0)","borderRadius":"0","borderWidth":"0","width":"80%","borderStyle":"solid","height":"64px"}' class="form-item layui-form-text">
+						<div  class="form-item layui-form-text input-div">
 							<label v-if="false" :style='{"padding":"0 10px","boxShadow":"0 0 6px rgba(255,0,0,0)","borderColor":"rgba(0,0,0,0)","backgroundColor":"transparent","color":"#333","borderRadius":"0","textAlign":"right","borderWidth":"0","width":"84px","fontSize":"16px","borderStyle":"solid"}' class="form-label">供应商地址：</label>
 							<input :style='{"padding":"0 10px","boxShadow":"0 0 0px rgba(0,0,0,.5)","borderColor":"#ccc","backgroundColor":"rgba(233, 233, 233, 1)","color":"#333","borderRadius":"8px","textAlign":"left","borderWidth":"0","width":"100%","fontSize":"14px","borderStyle":"solid","height":"44px"}' type="text"   id="gongyingshangdizhi" name="gongyingshangdizhi" placeholder="请输入供应商地址" autocomplete="off" class="layui-input">
 						</div>
@@ -164,13 +203,13 @@
 				});
 				return false
 			}
-			if(!isPhone(data.gongyingshangdianhua)){
-				layer.msg('供应商电话应输入电机格式', {
-					time: 2000,
-					icon: 5
-				});
-				return false
-			}
+			// if(!isPhone(data.gongyingshangdianhua)){
+			// 	layer.msg('供应商电话应输入电机格式', {
+			// 		time: 2000,
+			// 		icon: 5
+			// 	});
+			// 	return false
+			// }
 			if(!isMobile(data.lianxidianhua)){
 				layer.msg('联系电话应输入手机格式', {
 					time: 2000,

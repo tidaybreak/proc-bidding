@@ -38,40 +38,22 @@
 								<!---->
 							</div>
 						</div>
-						<div data-v-d94d3b2c="" class="el-form-item"><label class="el-form-item__label" style="width: 160px;">招标分类：</label>
-							<div class="el-form-item__content" style="margin-left: 160px;">{{detail.zhaobiaofenlei}}
-								<!---->
-							</div>
-						</div>
 						<!--<div data-v-d94d3b2c="" class="el-form-item"><label class="el-form-item__label" style="width: 160px;">项目概述：</label>
 							<div class="el-form-item__content" style="margin-left: 160px;">
 								<pre data-v-d94d3b2c="" class="pre">奥飞数据计划在海南地区开多家线下免税店，需有相关行业经验的装修总包供应商。单店面积在350平左右。</pre>
 							</div>
 						</div>-->
-						<div data-v-d94d3b2c="" class="el-form-item"><label class="el-form-item__label" style="width: 160px;">公告开始时间：</label>
-							<div class="el-form-item__content" style="margin-left: 160px;">{{detail.fabushijian}}
+
+
+						<div data-v-d94d3b2c="" class="el-form-item"><label class="el-form-item__label" style="width: 160px;">详情：</label>
+							<div class="el-form-item__content" style="margin-left: 160px;">
+                                    <pre data-v-d94d3b2c="" class="pre" v-html="detail.toubiaoxiangqing"></pre>
 								<!---->
 							</div>
 						</div>
-						<div data-v-d94d3b2c="" class="el-form-item"><label class="el-form-item__label" style="width: 160px;">公告截止时间：</label>
-							<div class="el-form-item__content" style="margin-left: 160px;">{{detail.jiezhishijian}}
-								<!---->
-							</div>
-						</div>
-						<div data-v-d94d3b2c="" class="el-form-item"><label class="el-form-item__label" style="width: 160px;">报名截止时间：</label>
-							<div class="el-form-item__content" style="margin-left: 160px;"><span data-v-d94d3b2c="" style="color: rgb(246, 64, 39);">{{detail.jiezhishijian}}</span>
-								<!---->
-							</div>
-						</div>
-						<div data-v-d94d3b2c="" class="el-form-item"><label class="el-form-item__label" style="width: 160px;">招标文件：</label>
+						<div data-v-d94d3b2c="" class="el-form-item"><label class="el-form-item__label" style="width: 160px;">相关文件：</label>
 							<div class="el-form-item__content" style="margin-left: 160px;">
 								<a style="display:block;" :style='{"padding":"0 15px","boxShadow":"0 0 0px rgba(255,0,0,.3)","borderColor":"rgba(0,0,0,.3)","backgroundColor":"rgba(130, 198, 243, 1)","color":"rgba(0, 0, 0, 1)","borderRadius":"24px","textAlign":"center","borderWidth":"0","width":"15%","lineHeight":"34px","fontSize":"14px","borderStyle":"solid"}' download="zhaobiaowenjian" :href="baseurl+detail.zhaobiaowenjian">点击下载</a>
-							</div>
-						</div>
-						<div data-v-d94d3b2c="" class="el-form-item"><label class="el-form-item__label" style="width: 160px;">招标详情：</label>
-							<div class="el-form-item__content" style="margin-left: 160px;">
-                                    <pre data-v-d94d3b2c="" class="pre" v-html="detail.zhaobiaoxiangqing"></pre>
-								<!---->
 							</div>
 						</div>
 						<!---->
