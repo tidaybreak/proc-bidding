@@ -51,7 +51,9 @@ public class FileController{
 			throw new EIException("上传文件不能为空");
 		}
 		String fileExt = file.getOriginalFilename().substring(file.getOriginalFilename().lastIndexOf(".")+1);
-		File path = new File(ResourceUtils.getURL("classpath:static").getPath());
+		//File path = new File(ResourceUtils.getURL("classpath:static").getPath());
+		File path = new File("/data/static");
+
 		if(!path.exists()) {
 		    path = new File("");
 		}
@@ -89,7 +91,9 @@ public class FileController{
 	@RequestMapping("/download")
 	public ResponseEntity<byte[]> download(@RequestParam String fileName) {
 		try {
-			File path = new File(ResourceUtils.getURL("classpath:static").getPath());
+			//File path = new File(ResourceUtils.getURL("classpath:static").getPath());
+			File path = new File("/data/static");
+
 			if(!path.exists()) {
 			    path = new File("");
 			}

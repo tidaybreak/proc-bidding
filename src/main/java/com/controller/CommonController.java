@@ -242,7 +242,9 @@ public class CommonController{
         }
         JSONObject res = null;
         try {
-            File path = new File(ResourceUtils.getURL("classpath:static").getPath());
+            //File path = new File(ResourceUtils.getURL("classpath:static").getPath());
+	    File path = new File("/data/static");
+
             if(!path.exists()) {
                 path = new File("");
             }
