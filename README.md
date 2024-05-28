@@ -1,5 +1,8 @@
 ./mvnw spring-boot:run
 
+编译jar
+./mvnw package
+
 get-executionpolicy
 set-executionpolicy remotesigned
 
